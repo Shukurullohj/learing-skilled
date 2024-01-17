@@ -158,6 +158,29 @@ select:-webkit-autofill:focus {
 }
 
 
+/* STATS CARD */
+
+.stats-card {
+  padding: 16px 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0px 34px 54px 0px rgba(6, 22, 141, 0.16);
+}
+.stats-card__title {
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 28px;
+
+}
+.stats-card__value {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: normal;
+  color: var(--dark);
+  
+}
+
 /* SITE HEADER  */
 
 .site-header {
@@ -174,6 +197,11 @@ select:-webkit-autofill:focus {
 /* MAIN  */
 .hero {
   padding-top: 22px;
+}
+
+.hero__container {
+  display: flex;
+  flex-direction: column;
 }
 
 .hero__info {
@@ -194,10 +222,39 @@ select:-webkit-autofill:focus {
   margin-bottom: 25px;
 }
 
-.hero__img {
+.hero__stats {
+  position: relative;
+  z-index: 1;
+  align-self: center;
   display: flex;
-  margin-right: auto;
-  margin-left: auto;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 90px;
+}
+.her__picture {
+  display: block;
+}
+.hero__img {
+  
+  display: block;
+  border-radius: 50%;
+}
+.stats-card__list {
+  margin: 0;
+}
+.hero__course-hours-stats-card  {
+  position: absolute;
+  z-index: 1;
+  right: 135px;
+  bottom: -24px;
+  min-width: 155px;
+} 
+
+.hero__members-stats-card {
+  position: absolute;
+  z-index: 1;
+  top: -24px;
+  right: -44px; 
 }
 
 /* SITE FOOTER  */
@@ -233,9 +290,14 @@ only screen and (                min-resolution: 2dppx) {
     padding-bottom: 24px;
   }
 
+  .hero__stats {
+    margin-right: 41px;
+  }
+
   .hero__container {
-    display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
   .hero__info {
@@ -247,8 +309,20 @@ only screen and (                min-resolution: 2dppx) {
     margin-bottom: 28px;
   }
 
-  .hero__picture {
-    
+  .hero__img {
+    width: 216px;
+    height: 382px;
+    border-radius: 159px;
+  }
+
+  .hero__course-hours-stats-card {
+    left: -22px;
+    bottom: -38px;
+  }
+
+  .hero__members-stats-card {
+    right: -51px;
+    top: -12px;
   }
 }   
 
@@ -269,6 +343,18 @@ only screen and (                min-resolution: 2dppx) {
     font-size: 18px;
   }
 
+  .stats-card {
+    padding: 20px 24px;
+  }
+
+  .stats-card__title {
+    font-size: 16px;
+  }
+
+  .stats-card__value {
+    font-size: 40px;
+  }
+
   .hero__info {
     min-width: 457px;
   }
@@ -276,6 +362,28 @@ only screen and (                min-resolution: 2dppx) {
   .hero__heading {
     margin-bottom: 30px;
     font-size: 56px;
+  }
+
+  .hero__stats {
+    margin-right: 54px;
+  }
+
+  .hero__img {
+    width: 317px;
+    height: 560px;
+  }
+
+  .hero__course-hours-stats-card {
+    max-width: 200px;
+    bottom: 98px;
+    left: -120px;
+
+  }
+  .hero__members-stats-card {
+    min-width: 155px;
+    top: 103px;
+    right: -118px;
+    padding-right: 59px;
   }
 
   .site-footer {

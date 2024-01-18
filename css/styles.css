@@ -30,7 +30,7 @@ body {
   font-weight: 500;
   line-height: 26px;
   background-color: #fff;
-  background-image: linear-gradient(180deg, #ff 0%, #f0f1ff 100%);
+  background-image: linear-gradient(180deg, #fff 0%, #f0f1ff 100%);
   color: var(--body-text);
 }
 
@@ -181,6 +181,70 @@ select:-webkit-autofill:focus {
   
 }
 
+/* CARD  */
+
+.card {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 56px 28px 32px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 25px 50px 0px rgba(6, 22, 141, 0.04);
+}
+
+.card--primary {
+  border-radius: 10px;
+  background: var(--Gradient-1, linear-gradient(180deg, #FF6F48 0%, #F02AA6 100%));
+  padding-top: 24px;
+}
+
+.card--primary .card__title {
+  color: #fff;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 32px;
+}
+
+.card__icon {
+  position: absolute;
+  z-index: 1;
+  top: -24px;
+  left: 28px;
+}
+
+.card__title {
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: normal;
+  color: var(--dark);
+}
+
+.card__description {
+  flex-grow: 1;
+  margin-top: 0;
+  margin-bottom: 24px;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.card__link {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+  color: var(--primary);
+}
+
+.card__link:hover {
+  opacity: 0.8;
+}
+
 /* SITE HEADER  */
 
 .site-header {
@@ -257,6 +321,19 @@ select:-webkit-autofill:focus {
   right: -44px; 
 }
 
+
+
+/* POPULAR COURSE  */
+
+.popular-course {
+  padding-top: 45px;
+  padding-bottom: 80px;
+}
+
+.popular-course__card:not(:last-child) {
+  margin-bottom: 40px;
+}
+
 /* SITE FOOTER  */
 
 .site-footer {
@@ -293,6 +370,14 @@ only screen and (                min-resolution: 2dppx) {
   .container {
     padding-right: 40px;
     padding-left: 40px;
+  }
+
+  .card {
+    padding: 56px 32px;
+  }
+
+  .card__icon {
+    left: 32px;
   }
 
   .site-header {
@@ -334,18 +419,29 @@ only screen and (                min-resolution: 2dppx) {
     right: -51px;
     top: -12px;
   }
+
+  .popular-course {
+    padding-top: 90px;
+    padding-bottom: 30px;
+  }
+
+  .popular-course__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .popular-course__card {
+    width: calc( (100% - 10px) / 2);
+  }
+
+  .popular-course__card, .popular-course__card:not(:last-child) {
+    margin-bottom: 56px;
+  }
+  
 }   
 
 @media only screen and (min-width: 1024px) {
-  /* body {
-    background-image: 
-    url('../img/body-pill-bg.svg'),
-    linear-gradient(180deg, #fff 0%, #f0f1ff 100%);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 551px 552px, auto 100%;
-    background-position: right -254px top -54px, left top;
-  } */
   body {
     background-image: 
     url('../img/body-pill-bg-desktop.svg'),
@@ -355,6 +451,7 @@ only screen and (                min-resolution: 2dppx) {
     font-size: 18px;
     line-height: 28px;
   }
+
   .logo__img {
     width: 124px;
     height: 45px;
@@ -376,6 +473,25 @@ only screen and (                min-resolution: 2dppx) {
 
   .stats-card__value {
     font-size: 40px;
+  }
+
+  .card {
+    padding: 64px 32px;
+  }
+
+  .card__title {
+    font-size: 24px;
+    line-height: normal;
+  }
+
+  .card__description {
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  .card--primary .card__title {
+    font-size: 32px;
+    line-height: 40px;
   }
 
   .hero__info {
@@ -407,6 +523,13 @@ only screen and (                min-resolution: 2dppx) {
     top: 103px;
     right: -118px;
     padding-right: 59px;
+  }
+
+  .popular-course__card {
+    width: calc((100% - 30px) / 3 );
+  }
+  .popular-course__card, .popular-course__card:not(:last-child) {
+    margin-bottom: 80px;
   }
 
   .site-footer {
